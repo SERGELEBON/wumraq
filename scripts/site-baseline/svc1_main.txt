@@ -1,0 +1,205 @@
+</header>
+    <div class="container-fluid subheader crumb">
+        <div class="container">
+            <ul><li><a href="../../">Home</a></li>&nbsp;<i class="fa fa-angle-right"  style="color:#fff;"></i>&nbsp;</li><li>Services</li></ul>
+        </div>
+    </div>
+	<section class="services wow slideInLeft">
+		<div class="container">
+			<div class="view">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="content-wrapper">
+                    <div class="row">
+                                                <div class="col-sm-5">
+                            <div class="img-wrap">
+                                <img src="../../img/services/corporate_manned_guarding2069672904.jpg" class="img-fluid" width="100%" alt="Corporate Manned Guarding"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <h3 class="text-uppercase">Corporate Manned Guarding</h3>
+                            <div class="seperator mb-3"></div>
+                            <div class="details mb-4"><p>SafeNet provides highly trained and professional guards for offices, banks, hotels, malls, and other corporate environments. Our corporate manned guarding services focus on:</p>
+<p>Access control &amp; visitor management to ensure only authorized persons enter.</p>
+<p>Reception support &amp; customer service with guards trained to represent your brand.</p>
+<p>Patrols &amp; CCTV monitoring to detect and deter risks.</p>
+<p>Emergency response &amp; policy enforcement to safeguard staff, clients, and assets.</p>
+<p>Our guards combine security expertise with professionalism and discretion, creating a safe, welcoming, and well-managed environment for your business.<br />
+&nbsp;</p>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="category-menu">
+                    <h2 class="mb-2 text-uppercase">Browse Other services</h2>
+                    <div class="row">
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/11/industrial-manned-guarding">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/_industrial_manned_guarding1942854346.png" class="img-fluid inner-img" alt=" Industrial Manned Guarding" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/11/industrial-manned-guarding">
+                                            <h4 class="text-capitalize"> Industrial Manned Guarding</h4>
+                                        </a>
+                                        <div class="details mb-2">For warehouses, factories, logistics yards, construction sites, and high-risk...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/11/industrial-manned-guarding">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/2/mobile-patrol-services">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/mobile_patrol_services1940947803.png" class="img-fluid inner-img" alt="Mobile Patrol Services" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/2/mobile-patrol-services">
+                                            <h4 class="text-capitalize">Mobile Patrol Services</h4>
+                                        </a>
+                                        <div class="details mb-2">For clients with large or multiple sites, our patrol services offer...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/2/mobile-patrol-services">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/3/event-security-management">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/event_security_management927651658.png" class="img-fluid inner-img" alt="Event Security Management" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/3/event-security-management">
+                                            <h4 class="text-capitalize">Event Security Management</h4>
+                                        </a>
+                                        <div class="details mb-2">We manage security for public and private events with tailored protocols for...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/3/event-security-management">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/4/executive-protection">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/vip_escort_&_personal_protection587143962.jpg" class="img-fluid inner-img" alt="Executive Protection" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/4/executive-protection">
+                                            <h4 class="text-capitalize">Executive Protection</h4>
+                                        </a>
+                                        <div class="details mb-2">We provide secure transportation and personal safety for high-risk individuals...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/4/executive-protection">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/5/cctv-installation-and-monitoring">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/cctv_installation_&_monitoring1586465675.jpg" class="img-fluid inner-img" alt="CCTV Installation & Monitoring" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/5/cctv-installation-and-monitoring">
+                                            <h4 class="text-capitalize">CCTV Installation & Monitoring</h4>
+                                        </a>
+                                        <div class="details mb-2">We install, monitor, and maintain surveillance systems customized to your...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/5/cctv-installation-and-monitoring">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/6/alarm-response-and-rapid-intervention">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/alarm_response_&_rapid_intervention22333877.jpg" class="img-fluid inner-img" alt="Alarm Response & Rapid Intervention" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/6/alarm-response-and-rapid-intervention">
+                                            <h4 class="text-capitalize">Alarm Response & Rapid Intervention</h4>
+                                        </a>
+                                        <div class="details mb-2">Our Rapid Intervention Team responds instantly to alarms and emergencies,...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/6/alarm-response-and-rapid-intervention">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/9/vehicle-tracking-solutions">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/vehicle_tracking_solutions267077206.jpg" class="img-fluid inner-img" alt="Vehicle Tracking Solutions" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/9/vehicle-tracking-solutions">
+                                            <h4 class="text-capitalize">Vehicle Tracking Solutions</h4>
+                                        </a>
+                                        <div class="details mb-2">SafeNet offers advanced GPS-based vehicle tracking systems to help clients...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/9/vehicle-tracking-solutions">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        							<div class="col-sm-3 my-4">
+                                <div class="content-wrap">
+                                    <a href="../../3/10/biometric-access-control-systems">
+                                        <div class="img-item-wrap">
+                                            <img src="../../img/services/biometric_access_control_systems1031152757.png" class="img-fluid inner-img" alt="Biometric Access Control Systems" />
+                                        </div>
+                                    </a>
+                                    <div class="item-wrapper p-4">
+                                        <a href="../../3/10/biometric-access-control-systems">
+                                            <h4 class="text-capitalize">Biometric Access Control Systems</h4>
+                                        </a>
+                                        <div class="details mb-2">Our biometric access control systems provide secure, efficient, and trackable...</div>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="text-end" href="../../3/10/biometric-access-control-systems">
+                                                <i class="bx bx-arrow-back"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>		</div>
+	</section>

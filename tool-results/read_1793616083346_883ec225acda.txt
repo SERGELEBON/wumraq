@@ -1,0 +1,906 @@
+     1→     1→"use client";
+     2→     2→
+     3→     3→import React, { useEffect, useRef, useState } from "react";
+     4→     4→import { useSite } from "./site-context";
+     5→     5→import { Reveal } from "./effects";
+     6→     6→import {
+     7→     7→  HeroSlider,
+     8→     8→  ServicesCarousel,
+     9→     9→  ClientsCarousel,
+    10→    10→  BrowseOtherServices,
+    11→    11→} from "./carousels";
+    12→    12→import {
+    13→    13→  ABOUT,
+    14→    14→  ABOUT_VALUES,
+    15→    15→  CLIENTS,
+    16→    16→  CONTACT_HOURS,
+    17→    17→  HOME_VALUES,
+    18→    18→  HERO_ABOUT,
+    19→    19→  MAP,
+    20→    20→  NEWS,
+    21→    21→  PROJECTS_SECTION,
+    22→    22→  SERVICES,
+    23→    23→  SERVICES_PAGE_ORDER,
+    24→    24→  SITE,
+    25→    25→  TEAM,
+    26→    26→  VISION_MISSION,
+    27→    27→} from "@/lib/site-data";
+    28→    28→
+    29→    29→/* ------------------------------------------------------------------ */
+    30→    30→/* Sous-header (fil d'ariane crumb) commun aux pages internes          */
+    31→    31→/* ------------------------------------------------------------------ */
+    32→    32→export function SubHeader({ label }: { label: string }) {
+    33→    33→  const { navigate } = useSite();
+    34→    34→  return (
+    35→    35→    <div className="container-fluid subheader crumb">
+    36→    36→      <div className="container">
+    37→    37→        <ul>
+    38→    38→          <li>
+    39→    39→            <a
+    40→    40→              href="#/"
+    41→    41→              onClick={(e) => {
+    42→    42→                e.preventDefault();
+    43→    43→                navigate("/");
+    44→    44→              }}
+    45→    45→            >
+    46→    46→              Home
+    47→    47→            </a>
+    48→    48→          </li>
+    49→    49→          <i
+    50→    50→            className="bx bx-chevron-right"
+    51→    51→            style={{ color: "#fff", margin: "0 0.5rem" }}
+    52→    52→            aria-hidden="true"
+    53→    53→          />
+    54→    54→          <li>{label}</li>
+    55→    55→        </ul>
+    56→    56→      </div>
+    57→    57→    </div>
+    58→    58→  );
+    59→    59→}
+    60→    60→
+    61→    61→function SectionBadge({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+    62→    62→  return (
+    63→    63→    <button className={`btn btn-primary border-0 text-uppercase mb-2 ${className}`}>
+    64→    64→      {children}
+    65→    65→    </button>
+    66→    66→  );
+    67→    67→}
+    68→    68→
+    69→    69→/* ------------------------------------------------------------------ */
+    70→    70→/* PAGE D'ACCUEIL                                                      */
+    71→    71→/* ------------------------------------------------------------------ */
+    72→    72→export function HomePage() {
+    73→    73→  const { navigate } = useSite();
+    74→    74→  const go = (to: string) => (e: React.MouseEvent) => {
+    75→    75→    e.preventDefault();
+    76→    76→    navigate(to);
+    77→    77→  };
+    78→    78→
+    79→    79→  return (
+    80→    80→    <>
+    81→    81→      {/* Hero : bloc About Us + slider (container-fluid original) */}
+    82→    82→      <div className="container-fluid">
+    83→    83→        <div className="row">
+    84→    84→          <Reveal anim="slideInLeft" className="col-sm-6 order-2 order-md-1">
+    85→    85→            <div className="shape">
+    86→    86→              <div className="home-about">
+    87→    87→                <SectionBadge> {HERO_ABOUT.badge}</SectionBadge>
+    88→    88→                <h3>{HERO_ABOUT.title}</h3>
+    89→    89→                <div className="details">{HERO_ABOUT.details}</div>
+    90→    90→                <a
+    91→    91→                  className="btn btn-success text-capitalize py-3 px-4 mt-4 border-0"
+    92→    92→                  href="#/2/about-us"
+    93→    93→                  onClick={go("/2/about-us")}
+    94→    94→                >
+    95→    95→                  Learn More <i className="bx bx-right-arrow-alt ms-2" aria-hidden="true" />
+    96→    96→                </a>
+    97→    97→              </div>
+    98→    98→            </div>
+    99→    99→          </Reveal>
+   100→   100→          <div className="col-sm-6 order-1 order-md-2">
+   101→   101→            <div className="slider">
+   102→   102→              <HeroSlider />
+   103→   103→            </div>
+   104→   104→          </div>
+   105→   105→        </div>
+   106→   106→      </div>
+   107→   107→
+   108→   108→      {/* Vision / Mission / Core Values */}
+   109→   109→      <Reveal as="section" anim="slideInRight" className="home-values">
+   110→   110→        <div className="container">
+   111→   111→          <div className="row">
+   112→   112→            {HOME_VALUES.map((v) => (
+   113→   113→              <div className="col-sm-4" key={v.title}>
+   114→   114→                <div className="items ps-3 h-100">
+   115→   115→                  <a className="readmore mt-4" href="#/2/about-us" onClick={go("/2/about-us")}>
+   116→   116→                    <h3>{v.title}</h3>
+   117→   117→                  </a>
+   118→   118→                  <h6>{v.text}</h6>
+   119→   119→                </div>
+   120→   120→              </div>
+   121→   121→            ))}
+   122→   122→          </div>
+   123→   123→        </div>
+   124→   124→      </Reveal>
+   125→   125→
+   126→   126→      {/* Services carousel */}
+   127→   127→      <Reveal as="section" anim="slideInLeft" className="services">
+   128→   128→        <div className="container">
+   129→   129→          <div className="text-center">
+   130→   130→            <SectionBadge>Professional Security Services in Ghana</SectionBadge>
+   131→   131→            <h2 className="text-capitalize">
+   132→   132→              Smart Security
+   133→   133→              <br />
+   134→   134→              <span className="header-text">Global Standard</span>
+   135→   135→            </h2>
+   136→   136→          </div>
+   137→   137→          <ServicesCarousel />
+   138→   138→        </div>
+   139→   139→      </Reveal>
+   140→   140→
+   141→   141→      {/* Projects / CTA */}
+   142→   142→      <Reveal as="section" anim="slideInRight" className="projects">
+   143→   143→        <div className="container">
+   144→   144→          <div className="row">
+   145→   145→            <div className="col-sm-6">
+   146→   146→              <div className="item-wrapper">
+   147→   147→                <SectionBadge className="mb-4">Our Clients</SectionBadge>
+   148→   148→                <a href="#/3/6/delivering-trusted-security-and-surveillance" onClick={go("/3/6/delivering-trusted-security-and-surveillance")}>
+   149→   149→                  <h2 className="text-capitalize mt-2">{PROJECTS_SECTION.title}</h2>
+   150→   150→                </a>
+   151→   151→                <div className="details mb-2">{PROJECTS_SECTION.details}</div>
+   152→   152→                <div className="btn-info mt-4">
+   153→   153→                  <div className="icon">
+   154→   154→                    <i className="bx bx-phone" aria-hidden="true" />
+   155→   155→                  </div>
+   156→   156→                  <div className="text">
+   157→   157→                    <span className="ms-2">{PROJECTS_SECTION.callLabel}</span>
+   158→   158→                    <br />
+   159→   159→                    <strong className="ms-2"> 0257942851, 054 785 8573</strong>
+   160→   160→                  </div>
+   161→   161→                </div>
+   162→   162→              </div>
+   163→   163→            </div>
+   164→   164→            <div className="col-sm-2" />
+   165→   165→            <div className="col-sm-4">
+   166→   166→              <div className="img-wrapper">
+   167→   167→                <img
+   168→   168→                  src={PROJECTS_SECTION.image}
+   169→   169→                  className="img-fluid inner-img"
+   170→   170→                  alt="Delivering trusted security and surveillance"
+   171→   171→                />
+   172→   172→              </div>
+   173→   173→            </div>
+   174→   174→          </div>
+   175→   175→        </div>
+   176→   176→      </Reveal>
+   177→   177→
+   178→   178→      {/* Clients carousel */}
+   179→   179→      <Reveal as="section" anim="fadeInRight" className="clients text-center">
+   180→   180→        <div className="container">
+   181→   181→          <SectionBadge className="text-center">Our Clients</SectionBadge>
+   182→   182→          <h2 className="mb-4">
+   183→   183→            Our Top Most Loyal <span className="text">Trusted Partners</span>
+   184→   184→          </h2>
+   185→   185→          <ClientsCarousel />
+   186→   186→        </div>
+   187→   187→      </Reveal>
+   188→   188→    </>
+   189→   189→  );
+   190→   190→}
+   191→   191→
+   192→   192→/* ------------------------------------------------------------------ */
+   193→   193→/* PAGE À PROPOS                                                       */
+   194→   194→/* ------------------------------------------------------------------ */
+   195→   195→export function AboutPage() {
+   196→   196→  return (
+   197→   197→    <>
+   198→   198→      <SubHeader label="About Us" />
+   199→   199→      <Reveal as="section" anim="slideInRight" className="about-main">
+   200→   200→        <div className="container">
+   201→   201→          <div className="row">
+   202→   202→            <div className="col-sm-6">
+   203→   203→              <SectionBadge>About Us</SectionBadge>
+   204→   204→              <h3 className="mt-3">{ABOUT.title}</h3>
+   205→   205→              <div className="details my-4">{ABOUT.paragraphs.join("\n\n")}</div>
+   206→   206→            </div>
+   207→   207→            <div className="col-sm-6">
+   208→   208→              <img src={ABOUT.image} className="img-fluid" alt={ABOUT.title} />
+   209→   209→            </div>
+   210→   210→          </div>
+   211→   211→        </div>
+   212→   212→      </Reveal>
+   213→   213→
+   214→   214→      <Reveal as="section" anim="slideInRight" className="home-values">
+   215→   215→        <div className="container">
+   216→   216→          <div className="row">
+   217→   217→            {VISION_MISSION.map((v) => (
+   218→   218→              <div className="col-sm-6" key={v.title}>
+   219→   219→                <div className="items ps-3 h-100">
+   220→   220→                  <h3>{v.title}</h3>
+   221→   221→                  <h6>{v.text}</h6>
+   222→   222→                </div>
+   223→   223→              </div>
+   224→   224→            ))}
+   225→   225→          </div>
+   226→   226→        </div>
+   227→   227→      </Reveal>
+   228→   228→
+   229→   229→      <Reveal as="section" anim="slideInRight" className="about-values">
+   230→   230→        <div className="container">
+   231→   231→          <div className="text-center mb-4">
+   232→   232→            <SectionBadge>our values</SectionBadge>
+   233→   233→          </div>
+   234→   234→          <div className="row">
+   235→   235→            {ABOUT_VALUES.map((v) => (
+   236→   236→              <div className="col-sm-4 my-3" key={v.title}>
+   237→   237→                <div className="item">
+   238→   238→                  <h3>{v.title}</h3>
+   239→   239→                  <div className="details">{v.text}</div>
+   240→   240→                </div>
+   241→   241→              </div>
+   242→   242→            ))}
+   243→   243→          </div>
+   244→   244→        </div>
+   245→   245→      </Reveal>
+   246→   246→
+   247→   247→      <Reveal as="section" anim="fadeInRight" className="clients text-center">
+   248→   248→        <div className="container">
+   249→   249→          <SectionBadge className="text-center">Our Clients</SectionBadge>
+   250→   250→          <h2 className="mb-4">
+   251→   251→            Our Top Most Loyal <span className="text">Trusted Partners</span>
+   252→   252→          </h2>
+   253→   253→          <div className="row clients-grid">
+   254→   254→            {CLIENTS.map((c) => (
+   255→   255→              <div className="col-sm-3" key={c.name}>
+   256→   256→                <div className="item-wrap">
+   257→   257→                  <img src={c.image} className="img-fluid" alt="Client Logo" />
+   258→   258→                </div>
+   259→   259→              </div>
+   260→   260→            ))}
+   261→   261→          </div>
+   262→   262→        </div>
+   263→   263→      </Reveal>
+   264→   264→    </>
+   265→   265→  );
+   266→   266→}
+   267→   267→
+   268→   268→/* ------------------------------------------------------------------ */
+   269→   269→/* PAGE SERVICES (grille)                                              */
+   270→   270→/* ------------------------------------------------------------------ */
+   271→   271→export function ServicesPage() {
+   272→   272→  const { navigate } = useSite();
+   273→   273→  const ordered = SERVICES_PAGE_ORDER.map(
+   274→   274→    (slug) => SERVICES.find((s) => s.slug === slug)!
+   275→   275→  );
+   276→   276→
+   277→   277→  return (
+   278→   278→    <>
+   279→   279→      <SubHeader label="Services" />
+   280→   280→      <Reveal as="section" anim="slideInLeft" className="services">
+   281→   281→        <div className="container">
+   282→   282→          <div className="row">
+   283→   283→            {ordered.map((s) => {
+   284→   284→              const to = `/3/${s.id}/${s.slug}`;
+   285→   285→              return (
+   286→   286→                <div className="col-sm-4 my-4" key={s.slug}>
+   287→   287→                  <div className="content-wrap">
+   288→   288→                    <a
+   289→   289→                      href={`#${to}`}
+   290→   290→                      onClick={(e) => {
+   291→   291→                        e.preventDefault();
+   292→   292→                        navigate(to);
+   293→   293→                      }}
+   294→   294→                    >
+   295→   295→                      <div className="img-wrapper">
+   296→   296→                        <img
+   297→   297→                          src={s.image}
+   298→   298→                          className="img-fluid inner-img"
+   299→   299→                          alt={s.title}
+   300→   300→                        />
+   301→   301→                      </div>
+   302→   302→                    </a>
+   303→   303→                    <div className="item-wrapper p-4">
+   304→   304→                      <a
+   305→   305→                        href={`#${to}`}
+   306→   306→                        onClick={(e) => {
+   307→   307→                          e.preventDefault();
+   308→   308→                          navigate(to);
+   309→   309→                        }}
+   310→   310→                      >
+   311→   311→                        <h4 className="text-capitalize">{s.title}</h4>
+   312→   312→                      </a>
+   313→   313→                      <div className="details mb-2">{s.short}</div>
+   314→   314→                      <div className="d-flex justify-content-end">
+   315→   315→                        <a
+   316→   316→                          className="text-end"
+   317→   317→                          href={`#${to}`}
+   318→   318→                          onClick={(e) => {
+   319→   319→                            e.preventDefault();
+   320→   320→                            navigate(to);
+   321→   321→                          }}
+   322→   322→                          aria-label={`Voir ${s.title}`}
+   323→   323→                        >
+   324→   324→                          <i className="bx bx-arrow-back" aria-hidden="true" />
+   325→   325→                        </a>
+   326→   326→                      </div>
+   327→   327→                    </div>
+   328→   328→                  </div>
+   329→   329→                </div>
+   330→   330→              );
+   331→   331→            })}
+   332→   332→          </div>
+   333→   333→        </div>
+   334→   334→      </Reveal>
+   335→   335→    </>
+   336→   336→  );
+   337→   337→}
+   338→   338→
+   339→   339→/* ------------------------------------------------------------------ */
+   340→   340→/* PAGE DÉTAIL SERVICE                                                 */
+   341→   341→/* ------------------------------------------------------------------ */
+   342→   342→export function ServiceDetailPage({ slug }: { slug: string }) {
+   343→   343→  const service = SERVICES.find((s) => s.slug === slug);
+   344→   344→
+   345→   345→  if (!service) {
+   346→   346→    return (
+   347→   347→      <>
+   348→   348→        <SubHeader label="Service" />
+   349→   349→        <section className="services">
+   350→   350→          <div className="container text-center py-5">
+   351→   351→            <h3>Service not found.</h3>
+   352→   352→          </div>
+   353→   353→        </section>
+   354→   354→      </>
+   355→   355→    );
+   356→   356→  }
+   357→   357→
+   358→   358→  return (
+   359→   359→    <>
+   360→   360→      <SubHeader label="Services" />
+   361→   361→      <Reveal as="section" anim="slideInLeft" className="services">
+   362→   362→        <div className="container">
+   363→   363→          <div className="row view">
+   364→   364→            <div className="col-md-5 view-img mb-4">
+   365→   365→              <img src={service.image} className="img-fluid" alt={service.title} />
+   366→   366→            </div>
+   367→   367→            <div className="col-md-7">
+   368→   368→              <SectionBadge>Our Services</SectionBadge>
+   369→   369→              <h3 className="mt-3">{service.title}</h3>
+   370→   370→              <div className="details mt-3">
+   371→   371→                {service.body.map((b, i) =>
+   372→   372→                  b.type === "p" ? (
+   373→   373→                    <p key={i}>{b.text}</p>
+   374→   374→                  ) : (
+   375→   375→                    <ul key={i}>
+   376→   376→                      <li>{b.text}</li>
+   377→   377→                    </ul>
+   378→   378→                  )
+   379→   379→                )}
+   380→   380→              </div>
+   381→   381→            </div>
+   382→   382→          </div>
+   383→   383→          <BrowseOtherServices excludeSlug={service.slug} />
+   384→   384→        </div>
+   385→   385→      </Reveal>
+   386→   386→    </>
+   387→   387→  );
+   388→   388→}
+   389→   389→
+   390→   390→/* ------------------------------------------------------------------ */
+   391→   391→/* PAGE ÉQUIPE                                                         */
+   392→   392→/* ------------------------------------------------------------------ */
+   393→   393→export function TeamPage() {
+   394→   394→  const { navigate } = useSite();
+   395→   395→  const [tab, setTab] = useState<"board" | "staff">("board");
+   396→   396→  const goMember = (slug: string) => (e: React.MouseEvent) => {
+   397→   397→    e.preventDefault();
+   398→   398→    navigate(`/5/1/5/${slug}`);
+   399→   399→  };
+   400→   400→
+   401→   401→  return (
+   402→   402→    <>
+   403→   403→      <SubHeader label="Team" />
+   404→   404→      <section className="team">
+   405→   405→        <div className="container">
+   406→   406→          <div className="text-center">
+   407→   407→            <SectionBadge>meet the team members</SectionBadge>
+   408→   408→          </div>
+   409→   409→          <ul className="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+   410→   410→            <li className="nav-item" role="presentation">
+   411→   411→              <button
+   412→   412→                className={`nav-link px-4 py-2${tab === "board" ? " active" : ""}`}
+   413→   413→                onClick={() => setTab("board")}
+   414→   414→                role="tab"
+   415→   415→                aria-selected={tab === "board"}
+   416→   416→              >
+   417→   417→                Board Members
+   418→   418→              </button>
+   419→   419→            </li>
+   420→   420→            <li className="nav-item" role="presentation">
+   421→   421→              <button
+   422→   422→                className={`nav-link px-4 py-2${tab === "staff" ? " active" : ""}`}
+   423→   423→                onClick={() => setTab("staff")}
+   424→   424→                role="tab"
+   425→   425→                aria-selected={tab === "staff"}
+   426→   426→              >
+   427→   427→                Staff Members
+   428→   428→              </button>
+   429→   429→            </li>
+   430→   430→          </ul>
+   431→   431→          <div className="tab-content" id="pills-tabContent">
+   432→   432→            <div className={`tab-pane fade${tab === "board" ? " show active" : ""}`} role="tabpanel">
+   433→   433→              <div className="row">
+   434→   434→                {TEAM.board.map((m) => (
+   435→   435→                  <div className="col-md-3 my-4" key={m.slug}>
+   436→   436→                    <a href={`#/5/1/5/${m.slug}`} onClick={goMember(m.slug)}>
+   437→   437→                      <div className="position-relative">
+   438→   438→                        <img src={m.image} className="img-fluid" alt={m.name} />
+   439→   439→                      </div>
+   440→   440→                      <div className="text-center txt mt-2">
+   441→   441→                        <h5 className="text-capitalize">{m.name}</h5>
+   442→   442→                        <h4 className="name text-2">{m.role}</h4>
+   443→   443→                      </div>
+   444→   444→                    </a>
+   445→   445→                  </div>
+   446→   446→                ))}
+   447→   447→              </div>
+   448→   448→            </div>
+   449→   449→            <div className={`tab-pane fade${tab === "staff" ? " show active" : ""}`} role="tabpanel">
+   450→   450→              <div className="row">{/* Staff Members — vide comme l'original */}</div>
+   451→   451→            </div>
+   452→   452→          </div>
+   453→   453→        </div>
+   454→   454→      </section>
+   455→   455→    </>
+   456→   456→  );
+   457→   457→}
+   458→   458→
+   459→   459→export function TeamMemberPage({ slug }: { slug: string }) {
+   460→   460→  const { navigate } = useSite();
+   461→   461→  const m = TEAM.board.find((x) => x.slug === slug);
+   462→   462→  if (!m) {
+   463→   463→    return (
+   464→   464→      <>
+   465→   465→        <SubHeader label="Team" />
+   466→   466→        <section className="team">
+   467→   467→          <div className="container text-center py-5">
+   468→   468→            <h3>Member not found.</h3>
+   469→   469→          </div>
+   470→   470→        </section>
+   471→   471→      </>
+   472→   472→    );
+   473→   473→  }
+   474→   474→  return (
+   475→   475→    <>
+   476→   476→      <SubHeader label="Team" />
+   477→   477→      <section className="team">
+   478→   478→        <div className="container">
+   479→   479→          <h1 className="text-end">Board Members</h1>
+   480→   480→          <div className="seperator2 w-100 mb-4 mt-0" />
+   481→   481→          <div className="row view mb-5">
+   482→   482→            <div className="col-md-3">
+   483→   483→              <div className="img-view">
+   484→   484→                <img src={m.image} className="img-fluid" width="100%" alt={m.name} />
+   485→   485→              </div>
+   486→   486→            </div>
+   487→   487→            <div className="col-md-9">
+   488→   488→              <h3>{m.name}</h3>
+   489→   489→              <h6>{m.role}</h6>
+   490→   490→              <div className="seperator2 mb-4 mt-2" />
+   491→   491→              <div className="details">
+   492→   492→                {m.bio.map((p, i) => (
+   493→   493→                  <p key={i}>{p}</p>
+   494→   494→                ))}
+   495→   495→              </div>
+   496→   496→            </div>
+   497→   497→          </div>
+   498→   498→          <div className="seperator2 w-100 mb-4 mt-0" />
+   499→   499→          <div className="text-center mt-5">
+   500→   500→            <button
+   501→   501→              className="btn btn-primary border-0 text-uppercase"
+   502→   502→              onClick={() => navigate("/5/team")}
+   503→   503→            >
+   504→   504→              other staff members
+   505→   505→            </button>
+   506→   506→            <div className="row other-members" />
+   507→   507→          </div>
+   508→   508→        </div>
+   509→   509→      </section>
+   510→   510→    </>
+   511→   511→  );
+   512→   512→}
+   513→   513→
+   514→   514→/* ------------------------------------------------------------------ */
+   515→   515→/* PAGE NEWS + ARTICLE                                                 */
+   516→   516→/* ------------------------------------------------------------------ */
+   517→   517→export function NewsPage() {
+   518→   518→  const { navigate } = useSite();
+   519→   519→  return (
+   520→   520→    <>
+   521→   521→      <SubHeader label="News" />
+   522→   522→      <section className="news">
+   523→   523→        <div className="container">
+   524→   524→          <div className="row">
+   525→   525→            {NEWS.posts.map((p) => {
+   526→   526→              const to = `/6/2/${p.slug}`;
+   527→   527→              return (
+   528→   528→                <div className="col-sm-4 mb-4" key={p.slug}>
+   529→   529→                  <div className="post-item h-100">
+   530→   530→                    <div className="news-img">
+   531→   531→                      <a
+   532→   532→                        href={`#${to}`}
+   533→   533→                        onClick={(e) => {
+   534→   534→                          e.preventDefault();
+   535→   535→                          navigate(to);
+   536→   536→                        }}
+   537→   537→                      >
+   538→   538→                        <img
+   539→   539→                          src={p.image}
+   540→   540→                          className="img-fluid"
+   541→   541→                          width="100%"
+   542→   542→                          alt={p.title}
+   543→   543→                        />
+   544→   544→                      </a>
+   545→   545→                    </div>
+   546→   546→                    <div className="contents mb-4 p-4">
+   547→   547→                      <div className="post-date text-uppercase mt-2">
+   548→   548→                        <span className="fw-bold">
+   549→   549→                          <i className="bx bx-user me-2" aria-hidden="true" />
+   550→   550→                          {p.author}
+   551→   551→                        </span>
+   552→   552→                        <i
+   553→   553→                          className="bx bxs-circle mx-3"
+   554→   554→                          style={{ color: "#df3e35", fontSize: ".4rem" }}
+   555→   555→                          aria-hidden="true"
+   556→   556→                        />
+   557→   557→                        {p.date}
+   558→   558→                      </div>
+   559→   559→                      <a
+   560→   560→                        href={`#${to}`}
+   561→   561→                        onClick={(e) => {
+   562→   562→                          e.preventDefault();
+   563→   563→                          navigate(to);
+   564→   564→                        }}
+   565→   565→                      >
+   566→   566→                        <h4 className="mt-3 text-uppercase">{p.title}</h4>
+   567→   567→                      </a>
+   568→   568→                      <h5 className="mb-3">{p.excerpt}</h5>
+   569→   569→                      <a
+   570→   570→                        className="read-more my-4 pb-1"
+   571→   571→                        href={`#${to}`}
+   572→   572→                        onClick={(e) => {
+   573→   573→                          e.preventDefault();
+   574→   574→                          navigate(to);
+   575→   575→                        }}
+   576→   576→                      >
+   577→   577→                        <span>Read More </span>
+   578→   578→                        <i
+   579→   579→                          className="bx bx-right-arrow-alt"
+   580→   580→                          style={{ color: "#df3e35" }}
+   581→   581→                          aria-hidden="true"
+   582→   582→                        />
+   583→   583→                      </a>
+   584→   584→                    </div>
+   585→   585→                  </div>
+   586→   586→                </div>
+   587→   587→              );
+   588→   588→            })}
+   589→   589→          </div>
+   590→   590→        </div>
+   591→   591→      </section>
+   592→   592→    </>
+   593→   593→  );
+   594→   594→}
+   595→   595→
+   596→   596→export function NewsArticlePage({ slug }: { slug: string }) {
+   597→   597→  const p = NEWS.posts.find((x) => x.slug === slug);
+   598→   598→  if (!p) {
+   599→   599→    return (
+   600→   600→      <>
+   601→   601→        <SubHeader label="News" />
+   602→   602→        <section className="news">
+   603→   603→          <div className="container text-center py-5">
+   604→   604→            <h3>Article not found.</h3>
+   605→   605→          </div>
+   606→   606→        </section>
+   607→   607→      </>
+   608→   608→    );
+   609→   609→  }
+   610→   610→  return (
+   611→   611→    <>
+   612→   612→      <SubHeader label="News" />
+   613→   613→      <section className="news">
+   614→   614→        <div className="container">
+   615→   615→          <div className="row">
+   616→   616→            <div className="col-md-8">
+   617→   617→              <div className="view-news">
+   618→   618→                <h3 className="mb-3">{p.title}</h3>
+   619→   619→                <img
+   620→   620→                  src={p.image}
+   621→   621→                  title={p.title}
+   622→   622→                  className="img-fluid"
+   623→   623→                  width="100%"
+   624→   624→                  alt={p.title}
+   625→   625→                />
+   626→   626→                <div className="view-content">
+   627→   627→                  <div className="meta p-3">
+   628→   628→                    <i className="bx bx-user me-2" aria-hidden="true" />
+   629→   629→                    {p.author} |{" "}
+   630→   630→                    <i className="bx bxs-calendar-alt me-2" aria-hidden="true" />
+   631→   631→                    {p.date} |
+   632→   632→                    <i
+   633→   633→                      className="bx bx-message-square-dots mx-2"
+   634→   634→                      aria-hidden="true"
+   635→   635→                    />
+   636→   636→                    {p.source} |{" "}
+   637→   637→                    <i className="bx bxs-hot me-2" aria-hidden="true" /> Hits{" "}
+   638→   638→                    {p.hits}
+   639→   639→                  </div>
+   640→   640→                  <div className="details mt-3">
+   641→   641→                    {p.paragraphs.map((t, i) => (
+   642→   642→                      <p key={i}>{t}</p>
+   643→   643→                    ))}
+   644→   644→                  </div>
+   645→   645→                  <div className="fw-bold mt-4">
+   646→   646→                    <i className="bx bx-message-alt-dots me-2" aria-hidden="true" />
+   647→   647→                    Source: {p.source}
+   648→   648→                  </div>
+   649→   649→                </div>
+   650→   650→              </div>
+   651→   651→            </div>
+   652→   652→            <div className="col-md-4">
+   653→   653→              <div className="recent-post">
+   654→   654→                <h3 className="text-uppercase p-3">
+   655→   655→                  <i className="bx bx-home-alt-2 me-2" aria-hidden="true" />
+   656→   656→                  Recent Posts
+   657→   657→                </h3>
+   658→   658→              </div>
+   659→   659→            </div>
+   660→   660→          </div>
+   661→   661→        </div>
+   662→   662→      </section>
+   663→   663→    </>
+   664→   664→  );
+   665→   665→}
+   666→   666→
+   667→   667→/* ------------------------------------------------------------------ */
+   668→   668→/* PAGE CLIENTS                                                        */
+   669→   669→/* ------------------------------------------------------------------ */
+   670→   670→export function ClientsPage() {
+   671→   671→  return (
+   672→   672→    <>
+   673→   673→      <SubHeader label="Our Clients" />
+   674→   674→      <Reveal as="section" anim="slideInLeft" className="clients">
+   675→   675→        <div className="container">
+   676→   676→          <h2 className="text-capitalize text-center mb-4">our clients</h2>
+   677→   677→          <div className="row clients-grid">
+   678→   678→            {CLIENTS.map((c) => (
+   679→   679→              <div className="col-sm-3" key={c.name}>
+   680→   680→                <div className="item-wrap">
+   681→   681→                  <img src={c.image} className="img-fluid" alt="Client Logo" />
+   682→   682→                </div>
+   683→   683→              </div>
+   684→   684→            ))}
+   685→   685→          </div>
+   686→   686→        </div>
+   687→   687→      </Reveal>
+   688→   688→    </>
+   689→   689→  );
+   690→   690→}
+   691→   691→
+   692→   692→/* ------------------------------------------------------------------ */
+   693→   693→/* PAGE CONTACTS                                                       */
+   694→   694→/* ------------------------------------------------------------------ */
+   695→   695→export function ContactsPage() {
+   696→   696→  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
+   697→   697→  const [form, setForm] = useState({
+   698→   698→    name: "",
+   699→   699→    phone: "",
+   700→   700→    email: "",
+   701→   701→    subject_title: "",
+   702→   702→    message: "",
+   703→   703→  });
+   704→   704→
+   705→   705→  const set =
+   706→   706→    (k: keyof typeof form) =>
+   707→   707→    (
+   708→   708→      e: React.ChangeEvent<
+   709→   709→        HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+   710→   710→      >
+   711→   711→    ) =>
+   712→   712→      setForm((f) => ({ ...f, [k]: e.target.value }));
+   713→   713→
+   714→   714→  const submit = async (e: React.FormEvent) => {
+   715→   715→    e.preventDefault();
+   716→   716→    setStatus("sending");
+   717→   717→    try {
+   718→   718→      const res = await fetch("/api/contact", {
+   719→   719→        method: "POST",
+   720→   720→        headers: { "Content-Type": "application/json" },
+   721→   721→        body: JSON.stringify(form),
+   722→   722→      });
+   723→   723→      if (!res.ok) throw new Error("failed");
+   724→   724→      setStatus("ok");
+   725→   725→      setForm({ name: "", phone: "", email: "", subject_title: "", message: "" });
+   726→   726→    } catch {
+   727→   727→      setStatus("err");
+   728→   728→    }
+   729→   729→  };
+   730→   730→
+   731→   731→  const mapSrc = `https://maps.google.com/maps?q=${MAP.lat},${MAP.lng}&z=${MAP.zoom}&output=embed`;
+   732→   732→
+   733→   733→  return (
+   734→   734→    <>
+   735→   735→      <SubHeader label="Contacts" />
+   736→   736→      <section className="contact">
+   737→   737→        <div className="container">
+   738→   738→          <h2 className="text-center mb-4">Contact Us</h2>
+   739→   739→          <div className="row">
+   740→   740→            <div className="col-sm-4 text-center mb-4">
+   741→   741→              <div className="phone h-100">
+   742→   742→                <i className="bx bx-envelope fa" aria-hidden="true" />
+   743→   743→                <h4>Email Us !</h4>
+   744→   744→                <h5>We’ll be happy to hear from you</h5>
+   745→   745→                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+   746→   746→              </div>
+   747→   747→            </div>
+   748→   748→            <div className="col-sm-4 text-center mb-4">
+   749→   749→              <div className="phone h-100">
+   750→   750→                <i className="bx bx-phone fa" aria-hidden="true" />
+   751→   751→                <h4>Call us !</h4>
+   752→   752→                <h5>We’ll be happy to hear from you</h5>
+   753→   753→                <a href="tel:0257942851">0257942851</a>
+   754→   754→                <br />
+   755→   755→                <a href="tel:0547858573">054 785 8573</a>
+   756→   756→              </div>
+   757→   757→            </div>
+   758→   758→            <div className="col-sm-4 text-center mb-4">
+   759→   759→              <div className="phone h-100">
+   760→   760→                <i className="bx bx-map fa" aria-hidden="true" />
+   761→   761→                <h4>Visit Our Office</h4>
+   762→   762→                <h5>{CONTACT_HOURS}</h5>
+   763→   763→                <span>
+   764→   764→                  Adjetey Adjei Sueley Street, Trasacco Valley, Accra
+   765→   765→                </span>
+   766→   766→              </div>
+   767→   767→            </div>
+   768→   768→          </div>
+   769→   769→        </div>
+   770→   770→      </section>
+   771→   771→
+   772→   772→      <section className="contact">
+   773→   773→        <div className="container">
+   774→   774→          <div className="row">
+   775→   775→            <div className="col-sm-6">
+   776→   776→              <div className="map">
+   777→   777→                <iframe
+   778→   778→                  title="Safenet Security Service — Google Map"
+   779→   779→                  src={mapSrc}
+   780→   780→                  loading="lazy"
+   781→   781→                  allowFullScreen
+   782→   782→                  referrerPolicy="no-referrer-when-downgrade"
+   783→   783→                />
+   784→   784→              </div>
+   785→   785→            </div>
+   786→   786→            <div className="col-sm-6">
+   787→   787→              <h2 className="text-center">Send Us a Message</h2>
+   788→   788→              <div className="seperator mb-4 mx-auto" />
+   789→   789→              {status === "ok" && (
+   790→   790→                <div className="alert alert-success">
+   791→   791→                  Your message has been sent successfully. We will get back to
+   792→   792→                  you soon.
+   793→   793→                </div>
+   794→   794→              )}
+   795→   795→              {status === "err" && (
+   796→   796→                <div className="alert alert-danger">
+   797→   797→                  Sending failed. Please try again or call us directly.
+   798→   798→                </div>
+   799→   799→              )}
+   800→   800→              <form action="/20/contacts" method="POST" onSubmit={submit}>
+   801→   801→                <div className="row">
+   802→   802→                  <div className="form-group col-sm-6 mb-2">
+   803→   803→                    <input
+   804→   804→                      type="text"
+   805→   805→                      className="form-control p-3"
+   806→   806→                      name="name"
+   807→   807→                      value={form.name}
+   808→   808→                      onChange={set("name")}
+   809→   809→                      placeholder="Full Name"
+   810→   810→                      required
+   811→   811→                    />
+   812→   812→                  </div>
+   813→   813→                  <div className="form-group col-sm-6 mb-2">
+   814→   814→                    <input
+   815→   815→                      type="tel"
+   816→   816→                      className="form-control p-3"
+   817→   817→                      name="phone"
+   818→   818→                      value={form.phone}
+   819→   819→                      onChange={set("phone")}
+   820→   820→                      placeholder="Phone Number"
+   821→   821→                      pattern="[0-9]{10}"
+   822→   822→                      required
+   823→   823→                    />
+   824→   824→                  </div>
+   825→   825→                </div>
+   826→   826→                <div className="form-group mb-2">
+   827→   827→                  <input
+   828→   828→                    type="email"
+   829→   829→                    className="form-control p-3"
+   830→   830→                    name="email"
+   831→   831→                    value={form.email}
+   832→   832→                    onChange={set("email")}
+   833→   833→                    placeholder="Email Address"
+   834→   834→                    required
+   835→   835→                  />
+   836→   836→                </div>
+   837→   837→                <div className="form-group mb-2">
+   838→   838→                  <input
+   839→   839→                    type="text"
+   840→   840→                    className="form-control p-3"
+   841→   841→                    name="subject_title"
+   842→   842→                    value={form.subject_title}
+   843→   843→                    onChange={set("subject_title")}
+   844→   844→                    placeholder="Subject"
+   845→   845→                    required
+   846→   846→                  />
+   847→   847→                </div>
+   848→   848→                <div className="form-group mb-2">
+   849→   849→                  <textarea
+   850→   850→                    className="form-control p-3"
+   851→   851→                    name="message"
+   852→   852→                    rows={5}
+   853→   853→                    required
+   854→   854→                    placeholder="Leave us a message..."
+   855→   855→                    value={form.message}
+   856→   856→                    onChange={set("message")}
+   857→   857→                  />
+   858→   858→                </div>
+   859→   859→                <div className="row text-center">
+   860→   860→                  <div className="form-group col-md-7 mt-2">
+   861→   861→                    <div
+   862→   862→                      className="g-recaptcha"
+   863→   863→                      data-sitekey="6LeBpIQrAAAAAIpK4xfgSSM6DqYQXS3PwcEoEUGD"
+   864→   864→                    />
+   865→   865→                  </div>
+   866→   866→                  <div className="form-group col-md-5 mt-2">
+   867→   867→                    <button
+   868→   868→                      type="submit"
+   869→   869→                      name="Feedback"
+   870→   870→                      className="btn btn-primary border-0"
+   871→   871→                      disabled={status === "sending"}
+   872→   872→                    >
+   873→   873→                      SUBMIT MESSAGE
+   874→   874→                    </button>
+   875→   875→                  </div>
+   876→   876→                </div>
+   877→   877→              </form>
+   878→   878→            </div>
+   879→   879→          </div>
+   880→   880→        </div>
+   881→   881→      </section>
+   882→   882→    </>
+   883→   883→  );
+   884→   884→}
+   885→   885→
+   886→   886→/** Page introuvable (route hash inconnue) */
+   887→   887→export function NotFoundPage() {
+   888→   888→  const { navigate } = useSite();
+   889→   889→  return (
+   890→   890→    <>
+   891→   891→      <SubHeader label="Not Found" />
+   892→   892→      <section className="about-main">
+   893→   893→        <div className="container text-center py-5">
+   894→   894→          <h3>The page you are looking for does not exist.</h3>
+   895→   895→          <button
+   896→   896→            className="btn btn-primary border-0 mt-4"
+   897→   897→            onClick={() => navigate("/")}
+   898→   898→          >
+   899→   899→            BACK TO HOME
+   900→   900→          </button>
+   901→   901→        </div>
+   902→   902→      </section>
+   903→   903→    </>
+   904→   904→  );
+   905→   905→}
+   906→   906→

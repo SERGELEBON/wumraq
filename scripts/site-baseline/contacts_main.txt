@@ -1,0 +1,84 @@
+</header>
+    <div class="container-fluid subheader crumb">
+        <div class="container">
+            <ul><li><a href="../">Home</a></li>&nbsp;<i class="fa fa-angle-right"  style="color:#fff;"></i>&nbsp;</li><li>Contacts</li></ul>
+        </div>
+    </div>
+		<section class="contact">
+		<div class="container">
+			<h2 class="text-center">Contact Us</h2>
+			<div class="seperator mb-4 mx-auto"></div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="text-center mb-4 p-4">
+						<span><i class="fa fa-envelope me-3"></i></span>
+						<h4>Email Us !</h4>
+						<h5 class="my-3">We’ll be happy to hear from you</h5>
+						<a href="mailto:contact@safenetsecuritygh.com">contact@safenetsecuritygh.com</a><br />					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="text-center mb-4 phone">
+						<span><i class="fa fa-phone me-3"></i></span>
+						<h4>Call us !</h4>
+						<h5 class="my-3">We’ll be happy to hear from you</h5>
+						<a href="tel:0257942851">0257942851</a><br /><a href="tel:054 785 8573">054 785 8573</a><br />					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="text-center mb-4 p-4">
+						<span><i class="fa fa-map me-3"></i></span>
+						<h4>Visit Our Office</h4>
+						<h5 class="my-3">Official working hours between 8am and 6pm Monday to Friday.</h5>
+													<a href="">
+								 Adjetey Adjei Sueley Street, Trasacco Valley,�Accra							</a>
+											</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+										<div class="map">
+							<div style="overflow:hidden;height:440px;">
+								<div id="gmap_canvas" style="height:440px;"></div>
+								<style>#gmap_canvas img{max-width:none!important;background:none!important;}</style>
+								<a class="google-map-code" href="http://www.map-embed.com" id="get-map-data">map-embed.com</a>
+							</div>
+											</div>
+				</div>
+				<div class="col-sm-6">
+					<h2 class="text-center">Send Us a Message</h2>
+<div class="seperator mb-4 mx-auto"></div>
+	<form action="/20/contacts" method="POST">
+		<div class="row">
+			<div class="form-group col-sm-6 mb-2">
+				<input type="text" class="form-control p-3" name="name" value="" placeholder="Full Name" required="">
+			</div>
+			<div class="form-group col-sm-6 mb-2">
+				<input type="tel" class="form-control p-3" name="phone" value="" placeholder="Phone Number" pattern="[0-9]{10}" required="">
+			</div>
+		</div>
+		<div class="form-group mb-2">
+			<input type="email" class="form-control p-3" name="email" value="" placeholder="Email Address" required="">
+		</div>
+		<div class="form-group mb-2">
+			<input type="text" class="form-control p-3" name="subject_title" value="" placeholder="Subject" required="">
+		</div>
+		<div class="form-group mb-2">
+			<textarea class="form-control p-3" name="message" rows="5" required placeholder="Leave us a message..."></textarea>
+		</div>
+		<div class="row text-center">
+			<div class="form-group col-md-7 mt-2">
+                <div class="g-recaptcha" data-sitekey="6LeBpIQrAAAAAIpK4xfgSSM6DqYQXS3PwcEoEUGD"></div>
+			</div>
+			<div class="form-group col-md-5 mt-2">
+				<button type="submit" name="Feedback" class="btn btn-primary border-0">SUBMIT MESSAGE	</button>
+			</div>
+		</div>
+	</form>
+	<div id="loader-icon" style="display:none;"><img src="../elements/reCaptcha/loader.gif" /></div>
+				</div>
+			</div>
+		</div>
+	</section>

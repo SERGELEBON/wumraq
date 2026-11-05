@@ -1,0 +1,400 @@
+<body>
+<header class="header-border">
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="../"><img class="img-fluid" src="../img/images/logo.png" width="140" alt="Safenet Security Service logo" /></a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <span  style="font-size: 1rem;color:#fff;bottom: 0.8rem;position: relative;text-transform:uppercase">Menu</span> <i style="font-size: 3rem;color:#df3e35;" class="bx bx-menu-alt-left"></i>
+</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../img/images/logo.png" alt="Safenet Security Service logo" height="80" /></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav m-auto justify-content-end flex-grow-1">
+            <li class="nav-item"><a class="nav-link" href="../">Home</a></li><li class="nav-item active"><a class="nav-link" href="../2/about-us"> About Us</a></li><li class="nav-item"><a class="nav-link" href="../3/professional-security-services-in-ghana">Services</a></li><li class="nav-item"><a class="nav-link" href="../6/news">News</a></li><li class="nav-item"><a class="nav-link" href="../7/our-clients">Our Clients</a></li><li class="nav-item"><a class="nav-link" href="../5/team">Team</a></li>            <div class="navbar-item">
+                <a href="../20/contacts" class="btn btn-primary border-0 text-uppercase mt-1 ms-3"><i class='bx bx-customize'></i> Contact Us</a>
+            </div>
+        </ul>
+      </div>
+</div>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../">Home</a><div class="triangle d-none d-sm-block"></div></li><li class="nav-item active"><a class="nav-link" href="../2/about-us"> About Us</a></li><li class="nav-item"><a class="nav-link" href="../3/professional-security-services-in-ghana">Services</a></li><li class="nav-item"><a class="nav-link" href="../6/news">News</a></li><li class="nav-item"><a class="nav-link" href="../7/our-clients">Our Clients</a></li><li class="nav-item"><a class="nav-link" href="../5/team">Team</a></li>        <div class="navbar-item">
+            <a href="../20/contacts" class="btn btn-primary border-0 text-uppercase mt-1 ms-3"><i class='bx bx-customize'></i> Contact Us</a>
+        </div>
+	</ul>
+</div>        </nav>
+    </div>
+</header>
+    <div class="container-fluid subheader crumb">
+        <div class="container">
+            <ul><li><a href="../">Home</a></li>&nbsp;<i class="fa fa-angle-right"  style="color:#fff;"></i>&nbsp;</li><li> About Us</li></ul>
+        </div>
+    </div>
+    
+    <section class="about-main wow slideInRight">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                                        <div class="shape">
+                        <div class="home-about mt-0">
+                            <button class="btn btn-primary border-0 text-uppercase mb-2"> About Us</button>
+                            <h3>SafeNet Security Services | #1 Private Security Company in Ghana</h3>
+                            <div class="details"><p>SafeNet Security Services Ltd is a licensed and registered private security company based in Adjirigano, Accra, Ghana. We are committed to delivering reliable, professional, and technology-enhanced security services to individuals, residential communities, commercial entities, institutions, and government agencies.</p>
+
+<p>At SafeNet, we believe security is more than presence &mdash; it is trust, preparedness, and proactive risk management. That&rsquo;s why every engagement begins with a comprehensive risk assessment, enabling us to design tailored solutions that align with our clients&rsquo; specific environments and industries.</p>
+
+<p>From deploying trained guards and mobile patrols to managing high-profile events, monitoring surveillance systems, and responding to emergencies, we deliver peace of mind backed by integrity, vigilance, and client&nbsp;satisfaction.</p>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="img-wrapper">
+                        <img src="../img/contents/safenet_security_services_ghana_1369868501.jpg" class="img-fluid inner-img" alt="SafeNet Security Services | #1 Private Security Company in Ghana" />
+                    </div>
+                    <div class="mt-4">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-values wow slideInRight">
+        <div class="container">
+            <div class="row">
+                                <div class="col-sm-6">
+                    <div class="items ps-3 h-100">
+                        <a class="readmore mt-4" href="../9/2/our-vision">
+                            <h3>Our Vision</h3>
+                        </a>
+                        <h6><p>To become the most trusted and technologically advanced private security provider in Ghana and West Africa, known for integrity, rapid response, and exceptional client service.</p>
+</h6>
+                    </div>
+                </div>
+                                <div class="col-sm-6">
+                    <div class="items ps-3 h-100">
+                        <a class="readmore mt-4" href="../9/3/our-mission">
+                            <h3>Our Mission</h3>
+                        </a>
+                        <h6><p>To deliver high-quality, customized security solutions that protect lives, assets, and reputations through disciplined personnel, advanced technology, and unmatched client service.</p>
+</h6>
+                    </div>
+                </div>
+                            </div>
+        </div>
+    </section>
+    <section class="about-values wow slideInRight" id="our_values">
+        <div class="container">
+            <button class="btn btn-primary border-0 text-uppercase mb-4">our values</button>
+            <div class="row">
+                                <div class="col-sm-6">
+                    <div class="items h-100">
+                        <a class="readmore mt-4" href="../9/1/integrity">
+                            <h3><i class='bx bx-check-shield me-2'></i> Integrity</h3>
+                        </a>
+                        <div class="details mb-4">We operate with honesty, transparency, and accountability. Trust is the cornerstone of our client relationships.</div>
+                    </div>
+                </div>
+                                <div class="col-sm-6">
+                    <div class="items h-100">
+                        <a class="readmore mt-4" href="../9/2/professionalism">
+                            <h3><i class='bx bx-check-shield me-2'></i> Professionalism</h3>
+                        </a>
+                        <div class="details mb-4">From appearance and conduct to reporting and response, we hold our guards and staff to the highest standards of discipline and efficiency</div>
+                    </div>
+                </div>
+                                <div class="col-sm-6">
+                    <div class="items h-100">
+                        <a class="readmore mt-4" href="../9/3/vigilance">
+                            <h3><i class='bx bx-check-shield me-2'></i> Vigilance</h3>
+                        </a>
+                        <div class="details mb-4">To deliver high-quality, customized security solutions that protect lives, assets, and reputations through disciplined personnel, advanced technology, and unmatched client service
+</div>
+                    </div>
+                </div>
+                                <div class="col-sm-6">
+                    <div class="items h-100">
+                        <a class="readmore mt-4" href="../9/4/client-centered-service">
+                            <h3><i class='bx bx-check-shield me-2'></i> Client-Centered Service</h3>
+                        </a>
+                        <div class="details mb-4">Every decision we make revolves around the client�s needs. We listen, adapt, and deliver with precision and care.</div>
+                    </div>
+                </div>
+                                <div class="col-sm-6">
+                    <div class="items h-100">
+                        <a class="readmore mt-4" href="../9/5/innovation">
+                            <h3><i class='bx bx-check-shield me-2'></i> Innovation</h3>
+                        </a>
+                        <div class="details mb-4">We embrace new technologies and smart security tools to deliver modern, effective solutions.</div>
+                    </div>
+                </div>
+                                <div class="col-sm-6">
+                    <div class="items h-100">
+                        <a class="readmore mt-4" href="../9/6/respect">
+                            <h3><i class='bx bx-check-shield me-2'></i> Respect</h3>
+                        </a>
+                        <div class="details mb-4">At our core, we are dedicated to delivering trusted security and surveillance solutions that provide peace of mind for homes and businesses alike. Our expertise spans from the installation of advanced CCTV systems.
+
+We treat every client, employee, and community with dignity and fairness, regardless of status or background.</div>
+                    </div>
+                </div>
+                            </div>
+        </div>
+    </section>
+    <section class="clients wow fadeInRight text-center">
+        <div class="container">
+            <button class="btn btn-primary border-0 text-uppercase mb-2 text-center">Our Clients</button>
+            <h2 class="mb-4">Our Top Most Loyal <span class="text">Trusted Partners</span></h2>
+           <div class="owl-carousel owl-clients owl-theme py-4" id="testimonial">
+                                    <div class="item">
+                        <div class="item-wrap text-center">
+                            <img src="../img/clients/East_Midas_Properties.jpg" class="img-fluid" alt="Client Logo" />
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <div class="item-wrap text-center">
+                            <img src="../img/clients/Cleanlife__Company_Ltd.jpg" class="img-fluid" alt="Client Logo" />
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <div class="item-wrap text-center">
+                            <img src="../img/clients/Premium_Purpose_Ltd.jpg" class="img-fluid" alt="Client Logo" />
+                        </div>
+                    </div>
+                                    <div class="item">
+                        <div class="item-wrap text-center">
+                            <img src="../img/clients/Orchard_Asset_Financing.jpg" class="img-fluid" alt="Client Logo" />
+                        </div>
+                    </div>
+                            </div>
+            
+        </div>
+    </section>
+<footer class="wow fadeInDown"><section class="top-footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-content">
+                <div class="contact-banner d-flex align-items-center rounded-4 overflow-hidden mb-4">
+                    <div class="contact-logo d-flex align-items-center justify-content-center px-4 py-3">
+                        <img src="../img/images/logo.png" alt="Safenet Security Service" height="100" />
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center flex-grow-1 px-4 py-3 contact-details">
+                                                <div class="d-flex align-items-center me-4 mb-2">
+                            <div class="icon-circle me-2"><i class="bx bx-phone"></i></div>
+                            <div>
+                                <small class="text-muted">phone number</small><br>
+                                <h5>0257942851<br> 054 785 8573</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center me-4 mb-2">
+                            <div class="icon-circle me-2"><i class="bx bx-envelope"></i></div>
+                            <div>
+                                <small class="text-muted">email address</small><br>
+                                <h5>contact@safenetsecuritygh.com</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="icon-circle me-2"><i class="bx bx-map"></i></div>
+                            <div>
+                                <small class="text-muted">location</small><br>
+                                <h5> Adjetey Adjei Sueley Street<br> Trasacco Valley<br>�Accra</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-sm-12">
+                <div class="item-wrap">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="text-uppercase mb-4">About Us</h3>
+                                                        <div class="details my-4">
+                                SafeNet Security Services Ltd is a licensed and registered private security company based in Adjirigano, Accra, Ghana. We are committed to delivering reliable, professional, and technology-enhanced security services to individuals, residential communities, commercial entities, institutions, and...                            </div>
+                            <div class="bd-highlight mt-4">
+                                <div class="mt-4 social-foot">
+	<!-- <div class="float-start p-2 border-0">
+		<a href="#" title="Facebook" target="_blank"><i class='bx bxl-facebook icon' ></i></a>
+	</div> -->
+	<div class="float-start p-2 border-0">
+		<a href="#" title="linkedin" target="_blank"><i class='bx bxl-linkedin icon' ></i></a>
+	</div>
+	<div class="float-start p-2 border-0">
+		<a href="#" title="instagram" target="_blank"><i class='bx bxl-instagram icon' ></i></a>
+	</div>
+	<!-- <div class="float-start p-2 border-0">
+		<a href="#" title="twitter" target="_blank"><i class='bx bxl-twitter icon' ></i></a>
+	</div>
+	<div class="float-start p-2 border-0">
+		<a href="#" title="twitter" target="_blank"><i class='bx bxl-twitter icon' ></i></a>
+	</div> -->
+	<div class="clear-fix"></div>
+</div>                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="content-wrap pe-4">
+                                <h3 class="text-uppercase mb-4">Quick Links</h3>
+                                                                        <a href="../2/about-us">
+                                            <h5 class="mb-4 text-capitalize"> About Us</h5>
+                                        </a>
+                                                                                                            <a href="../5/team">
+                                            <h5 class="mb-4 text-capitalize">Team</h5>
+                                        </a>
+                                                                                                            <a href="../6/news">
+                                            <h5 class="mb-4 text-capitalize">News</h5>
+                                        </a>
+                                                                                                            <a href="../20/contacts">
+                                            <h5 class="mb-4 text-capitalize">Contacts</h5>
+                                        </a>
+                                                                                                            <a href="../7/our-clients">
+                                            <h5 class="mb-4 text-capitalize">Our Clients</h5>
+                                        </a>
+                                                                                                </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="content-wrap">
+                                <h3 class="text-uppercase mb-4">Professional Security Services in Ghana</h3>
+                                                                    <a class="nav-link active p-0 mb-4" href="../3/1/corporate-manned-guarding">
+                                        <h5 class="text-capitalize">Corporate Manned Guarding</h5>
+                                    </a>
+                                                                    <a class="nav-link active p-0 mb-4" href="../3/11/industrial-manned-guarding">
+                                        <h5 class="text-capitalize"> Industrial Manned Guarding</h5>
+                                    </a>
+                                                                    <a class="nav-link active p-0 mb-4" href="../3/2/mobile-patrol-services">
+                                        <h5 class="text-capitalize">Mobile Patrol Services</h5>
+                                    </a>
+                                                                    <a class="nav-link active p-0 mb-4" href="../3/3/event-security-management">
+                                        <h5 class="text-capitalize">Event Security Management</h5>
+                                    </a>
+                                                                    <a class="nav-link active p-0 mb-4" href="../3/4/executive-protection">
+                                        <h5 class="text-capitalize">Executive Protection</h5>
+                                    </a>
+                                                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="content-wrap subscribe">
+                                <h3 class="text-uppercase mb-4">Subscribe</h3>
+                                <h5 class="mb-2">Stay updated with the latest security trends offers by subscribing to our newsletter.</h5>
+                                <div class="newsletter-form mt-4">
+                                        <form class="form-horizontal getquote" action="/2/about-us" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-group col-sm-8 mb-2 pe-0">
+                <input type="email" class="form-control" name="email" value="" placeholder="Your email address" required>
+            </div>
+            <div class="form-group col-sm-2 mb-2 ps-0">
+                <input class="btn btn-primary border-0 rounded-0" type="submit" name="SubmitForm" value="Subscribe">
+            </div>
+        </div>
+    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="bot-menu mt-4">
+                            <div class="dev py-3 me-4">2026 &copy; Safenet Security Service | All Rights Reserved | Powered by <a href='http://neroonesolutions.com' target='_blank'>Nero One Solutions</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</footer>
+<a id="button">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+        <g>
+            <path d="M83.7,91.3c-19.7,0-36.3-19.2-38.5-38.3l26.9,13c0.4,0.1,0.7,0.2,1.1,0.2c0.9,0,1.6-0.4,2.2-1c0.9-0.9,1-2.2,0.5-3.3
+                L46.7,4c-0.5-1-1.5-1.6-2.6-1.6H44h-0.1c-1.1,0-2.1,0.6-2.6,1.6l-29,58c-0.5,1.1-0.4,2.5,0.5,3.3c0.6,0.6,1.4,1,2.2,1
+                c0.4,0,0.7-0.1,1.1-0.2l15.1-6c1.5-0.6,2.2-2.3,1.6-3.8s-2.3-1.4-3.8-0.8l-11.8,5.2L43.9,8.5l26.7,51.8L45.1,48.7
+                c-0.4-0.1-0.9-0.2-1.2-0.2h-0.1c-1.6,0-3,1.4-3,3c0,24.5,19.8,44.3,44.3,44.3c1.6,0,3-1.4,3-3C88,91.1,85.3,91.3,83.7,91.3z"></path>
+            <path d="M53.2,89.9c-12.8-5.3-15.4-18-15.4-23.5c0-1.6,0.2-3.2-1.4-3.2l0,0c-1.6,0-3,1.4-3,3c0,4.8,2.5,10.1,5.2,14.8
+                c3.6,6,8,10.7,14.5,13.5c0.4,0.1,0.7,0.2,1.1,0.2c1.1,0,2.2-0.7,2.7-1.8C57.7,91.4,54.7,90.5,53.2,89.9z"></path>
+        </g>
+    </svg>
+</a>
+<!-- Modal -->
+	<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title" id="quoteModalLabel">Request A Service</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			<div class="alert alert-danger rounded-0 mb-0"></div>	<form action="/2/about-us" method="POST">
+		<div class="row">
+			<div class="form-group col-sm-6 mb-2">
+				<input type="text" class="form-control p-3" name="name" value="" placeholder="Full Name" required="">
+			</div>
+			<div class="form-group col-sm-6 mb-2">
+				<input type="tel" class="form-control p-3" name="phone" value="" placeholder="Phone Number" pattern="[0-9]{10}" required="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-sm-6 mb-2">
+				<input type="text" class="form-control p-3" name="email" value="" placeholder="Email" required="">
+			</div>
+			<div class="form-group col-sm-6 mb-2">
+				<input type="text" class="form-control p-3" name="location" value="" placeholder="Location" required="">
+			</div>
+		</div>
+		<div class="form-group mb-2">
+			<select name="title" required class="form-control p-3">
+				<option  value="">Select Product services</option>
+				<option rel='none' value = ' Industrial Manned Guarding'> Industrial Manned Guarding</option><option rel='none' value = 'Alarm Response & Rapid Intervention'>Alarm Response & Rapid Intervention</option><option rel='none' value = 'Biometric Access Control Systems'>Biometric Access Control Systems</option><option rel='none' value = 'CCTV Installation & Monitoring'>CCTV Installation & Monitoring</option><option rel='none' value = 'Corporate Manned Guarding'>Corporate Manned Guarding</option><option rel='none' value = 'Event Security Management'>Event Security Management</option><option rel='none' value = 'Executive Protection'>Executive Protection</option><option rel='none' value = 'Mobile Patrol Services'>Mobile Patrol Services</option><option rel='none' value = 'Vehicle Tracking Solutions'>Vehicle Tracking Solutions</option>			</select>
+		</div>
+		<div class="form-group mb-2">
+			<textarea class="form-control p-3" name="message" rows="5" required placeholder="Leave us a message..."></textarea>
+		</div>
+		<div class="row text-center">
+			<div class="form-group col-md-7 mt-2">
+                <div class="g-recaptcha" data-sitekey="6LeBpIQrAAAAAIpK4xfgSSM6DqYQXS3PwcEoEUGD"></div>
+			</div>
+			<div class="form-group col-md-5 mt-2">
+				<button type="submit" name="Feedback" class="btn btn-danger p-4 border-0 rounded-0">SUBMIT MESSAGE	</button>
+			</div>
+		</div>
+	</form>
+	<div id="loader-icon" style="display:none;"><img src="../elements/reCaptcha/loader.gif" /></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+			</div>
+		</div>
+	</div>
+<!--  -->
+
+
+
+
+
+
+
+
+
+
+<!--  -->
+ <!-- Portfolio Main JS File -->
+ 
+  
+  
+  
+  
+   <!-- END Portfolio Main JS File -->
+   <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+
+<div class="elfsight-app-c7fe0c60-f16c-4127-aaf8-ba07be05907a" data-elfsight-app-lazy></div>
+
+
+
+
+
+
+</body>

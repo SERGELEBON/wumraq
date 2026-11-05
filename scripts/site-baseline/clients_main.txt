@@ -1,0 +1,34 @@
+</header>
+    <div class="container-fluid subheader crumb">
+        <div class="container">
+            <ul><li><a href="../">Home</a></li>&nbsp;<i class="fa fa-angle-right"  style="color:#fff;"></i>&nbsp;</li><li>Our Clients</li></ul>
+        </div>
+    </div>
+	<section class="clients wow slideInLeft">
+        <div class="container">
+            <h2 class="text-uppercase"><span style="color: #05224c;"><i class='bxr  bx-pen-draw'></i> our</span> clients <span class="dot"></span></h2>
+            <div class="seperator"></div>
+            <div class="row">
+                                    <div class="col-sm-3 col-6">
+                        <div class="img-item">
+                            <img src="../img/clients/East_Midas_Properties.jpg" class="img-fluid" alt="East Midas Properties"/>
+                        </div>
+                    </div>
+                                    <div class="col-sm-3 col-6">
+                        <div class="img-item">
+                            <img src="../img/clients/Cleanlife__Company_Ltd.jpg" class="img-fluid" alt="Cleanlife  Company Ltd"/>
+                        </div>
+                    </div>
+                                    <div class="col-sm-3 col-6">
+                        <div class="img-item">
+                            <img src="../img/clients/Premium_Purpose_Ltd.jpg" class="img-fluid" alt="Premium Purpose Ltd"/>
+                        </div>
+                    </div>
+                                    <div class="col-sm-3 col-6">
+                        <div class="img-item">
+                            <img src="../img/clients/Orchard_Asset_Financing.jpg" class="img-fluid" alt="Orchard Asset Financing"/>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+	</section>

@@ -1,0 +1,32 @@
+</header>
+    <div class="container-fluid subheader crumb">
+        <div class="container">
+            <ul><li><a href="../">Home</a></li>&nbsp;<i class="fa fa-angle-right"  style="color:#fff;"></i>&nbsp;</li><li>News</li></ul>
+        </div>
+    </div>
+	<section class="news">
+		<div class="container">
+			<div class="row">
+           <div class="col-sm-4 mb-4">
+            <div class="post-item h-100">
+                <div class="news-img">
+                    <a href="../6/2/rebranding-private-security-companies">
+                        <img src="../img/news/rebranding_private_security_companies_.jpeg" class="img-fluid" width="100%" alt="Rebranding private security companies "/>
+                    </a>
+                </div>
+                <div class="contents mb-4 p-4">
+                    <div class="post-date text-uppercase mt-2">
+                        <span class="fw-bold"><i class="bx bx-user me-2"></i>Evans Sarpong </span>
+                        <i class='bx bxs-circle mx-3' style='color:#df3e35;font-size:.4rem;' ></i>15th Jul 2025                    </div>
+                    <a href="../6/2/rebranding-private-security-companies">
+                        <h4 class="mt-3 text-uppercase">Rebranding private security companies </h4>
+                    </a>
+                    <h5 class="mb-3">The Private Security Guard Association of Ghana (PSGAG) is made up of employees of private security companies, who work hand in hand with national...</h5>
+                    <a class="read-more my-4 pb-1" href="../6/2/rebranding-private-security-companies">
+                        <span>Read More </span><i class='bx bx-right-arrow-alt' style='color:#df3e35' ></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>		</div>
+	</section>

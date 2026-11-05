@@ -1,0 +1,40 @@
+</header>
+    <div class="container-fluid subheader crumb">
+        <div class="container">
+            <ul><li><a href="../">Home</a></li>&nbsp;<i class="fa fa-angle-right"  style="color:#fff;"></i>&nbsp;</li><li>Team</li></ul>
+        </div>
+    </div>
+    <section class="team">
+		<div class="container">
+			<button class="btn btn-primary border-0 text-uppercase mx-auto mb-4">meet the team members</button>
+<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active px-4 py-2" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Board Members</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link px-4 py-2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Staff Members</button>
+    </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="row">
+                            <div class="col-md-3 my-4">
+                                            <a href="../5/1/5/tracy-naa-adoley-acquaye">
+                            <div class="position-relative">
+                                <img src="../img/staff/tracy_naa_adoley_acquaye_.jpg" class="img-fluid" alt="Tracy Naa Adoley Acquaye " />
+                                <div class="img"></div>
+                            </div>
+                            <div class="text-center txt mt-2">
+                                <h5 class="text-capitalize">Tracy Naa Adoley Acquaye </h5>
+                                <h4 class="name text-2">Managing Director</h4>
+                            </div>
+                        </a>
+                                    </div>
+                    </div>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="row">
+                    </div>
+    </div>
+</div>		</div>
+	</section>
